@@ -15,21 +15,21 @@ const currentScore0 = document.getElementById('current--0');
 const currenScore1 = document.getElementById('current--1');
 const player1 = document.querySelector('.player--0');
 const player2 = document.querySelector('.player--1');
+let nameEl = document.querySelector('.name');
 
 let activePlayer = 0;
 let score = [0, 0];
 let random;
-let nameEl;
 let currentScore = 0;
 let playing = true; // used for start and end the game
-alert(keyBtn);
+
 /* (if playing === true - we can continue game)
 when we reached tha max score it will changed to false
 then the whole code will dosent work so the game will end */
 
 score0.textContent = 0;
 score1.textContent = 0;
-
+alert(keyBtn);
 diceEl.classList.add('hidden'); // for hide dice Image
 
 // player background color change to active player
@@ -68,7 +68,7 @@ let holdBtn = function () {
     score[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).innerText =
       score[activePlayer];
-    if (score[activePlayer] >= 100) {
+    if (score[activePlayer] >= 20) {
       playing = false;
       diceEl.classList.add('hidden');
       document
@@ -77,6 +77,7 @@ let holdBtn = function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+      document.getElementById(`name--${activePlayer}`).textContent = 'YOU WON';
     }
     switchPlayer();
   }
@@ -87,7 +88,8 @@ let newGame = function () {
   activePlayer = 0;
   currentScore = 0;
   playing = true;
-
+  document.getElementById(`name--0`).textContent = 'PlAYER 1';
+  document.getElementById(`name--1`).textContent = 'PlAYER 2';
   if (playing) {
     score0.textContent = 0;
     score1.textContent = 0;
