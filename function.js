@@ -23,9 +23,6 @@ let random;
 let currentScore = 0;
 let playing = true; // used for start and end the game
 
-/* (if playing === true - we can continue game)
-when we reached tha max score it will changed to false
-then the whole code will dosent work so the game will end */
 
 score0.textContent = 0;
 score1.textContent = 0;
@@ -43,11 +40,8 @@ let switchPlayer = function () {
 
 let diceRoll = function () {
   if (playing) {
-    //<---generate random dice roll (NUMBER)-->;
     random = Math.trunc(Math.random() * 6) + 1; // dice roll
 
-    //<--calling function to change the dice Image-->
-    //   rollImg();
     //<-- display the dice image -->
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${random}.png`;
@@ -110,7 +104,6 @@ let newGame = function () {
 };
 
 document.addEventListener('keydown', function (e) {
-  // console.log(e.key); // namba yendha key ah press pannalum console la andha key name show aagum
   if (e.key === 'r') {
     diceRoll();
   } else if (e.key === 'h') {
@@ -124,7 +117,7 @@ btnRoll.addEventListener('click', diceRoll);
 btnHold.addEventListener('click', holdBtn);
 btnNew.addEventListener('click', newGame);
 
-// <<<< ------- these code reinforeced ------->>>>
+// <<<< ------- these code SHORTEND ------->>>>
 // -----------------------------------------------------------------
 
 // document.getElementById(`current--${activePlayer}`).textContent = 0;
