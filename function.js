@@ -5,6 +5,9 @@
 let keyBtn = `FOR DICE ROLL [PRESS ®️ - r ]
 FOR HOLD VALUE [PRESS ®️ - h ]
 FOR NEW GAME [PRESS ®️ - n ]`;
+
+let target = 'The target value is 100 for WIN ';
+
 const score0 = document.getElementById('score--0');
 const score1 = document.getElementById('score--1');
 const diceEl = document.querySelector('.dice');
@@ -27,6 +30,7 @@ let playing = true; // used for start and end the game
 score0.textContent = 0;
 score1.textContent = 0;
 alert(keyBtn);
+alert(target);
 diceEl.classList.add('hidden'); // for hide dice Image
 
 // player background color change to active player
@@ -62,7 +66,7 @@ let holdBtn = function () {
     score[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).innerText =
       score[activePlayer];
-    if (score[activePlayer] >= 50) {
+    if (score[activePlayer] >= 100) {
       playing = false;
       diceEl.classList.add('hidden');
       document
