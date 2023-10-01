@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -7,12 +7,12 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 50%; /* Reduce font size to 50% (20% smaller) */
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -25,12 +25,12 @@ body {
 /* LAYOUT */
 main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 80rem; /* Reduce width to 80rem (20% smaller) */
+  height: 48rem; /* Reduce height to 48rem (20% smaller) */
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1.6rem 2.8rem rgba(0, 0, 0, 0.25); /* Reduce box-shadow */
   border-radius: 9px;
   overflow: hidden;
   display: flex;
@@ -38,7 +38,7 @@ main {
 
 .player {
   flex: 50%;
-  padding: 9rem;
+  padding: 8rem; /* Reduce padding to 8rem (20% smaller) */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,16 +48,16 @@ main {
 /* ELEMENTS */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: 3.2rem; /* Reduce font size to 3.2rem (20% smaller) */
   text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 2px;
+  letter-spacing: 0.8px; /* Reduce letter-spacing */
+  word-spacing: 1.6px; /* Reduce word-spacing */
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem; /* Reduce margin-bottom */
 }
 
 .score {
-  font-size: 8rem;
+  font-size: 6.4rem; /* Reduce font size to 6.4rem (20% smaller) */
   font-weight: 300;
   color: #c7365f;
   margin-bottom: auto;
@@ -79,24 +79,24 @@ main {
 
 .current {
   background-color: #c7365f;
-  opacity: 0.8;
+  opacity: 0.8; /* Reduce opacity to 0.8 (20% less opaque) */
   border-radius: 9px;
   color: #fff;
-  width: 65%;
-  padding: 2rem;
+  width: 64%; /* Reduce width to 64% (20% smaller) */
+  padding: 1.6rem; /* Reduce padding to 1.6rem (20% smaller) */
   text-align: center;
   transition: all 0.75s;
 }
 
 .current-label {
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-size: 1.7rem;
+  margin-bottom: 0.8rem; /* Reduce margin-bottom */
+  font-size: 1.6rem; /* Reduce font size to 1.6rem (20% smaller) */
   color: #ddd;
 }
 
 .current-score {
-  font-size: 3.5rem;
+  font-size: 3.2rem; /* Reduce font size to 3.2rem (20% smaller) */
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
@@ -108,7 +108,7 @@ main {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 1.8rem;
+  font-size: 1.6rem; /* Reduce font size to 1.6rem (20% smaller) */
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
@@ -118,30 +118,30 @@ main {
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 
-  padding: 0.7rem 2.5rem;
+  padding: 0.6rem 2.4rem; /* Reduce padding to 0.6rem (20% smaller) */
   border-radius: 50rem;
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1); /* Reduce box-shadow */
 }
 
 .btn::first-letter {
-  font-size: 2.4rem;
+  font-size: 1.6rem; /* Reduce font size to 1.6rem (20% smaller) */
   display: inline-block;
-  margin-right: 0.7rem;
+  margin-right: 0.6rem; /* Reduce margin-right */
 }
 
 .btn--new {
-  top: 4rem;
+  top: 4rem; /* Reduce top position to 4rem (20% smaller) */
 }
 .btn--roll {
-  top: 39.3rem;
+  top: 36rem; /* Reduce top position to 36rem (20% smaller) */
 }
 .btn--hold {
-  top: 46.1rem;
+  top: 42rem; /* Reduce top position to 42rem (20% smaller) */
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, 2.4px); /* Adjusted transformation */
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15); /* Reduce box-shadow */
 }
 
 .btn:focus {
@@ -151,10 +151,10 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 16.5rem;
+  top: 14.4rem; /* Reduce top position to 14.4rem (20% smaller) */
   transform: translateX(-50%);
-  height: 10rem;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  height: 6.4rem; /* Reduce height to 6.4rem (20% smaller) */
+  box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.2); /* Reduce box-shadow */
 }
 
 .player--winner {
